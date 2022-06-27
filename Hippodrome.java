@@ -18,4 +18,14 @@ public class Hippodrome {
         hippodrome.getHorses().add(Victory);
         hippodrome.getHorses().add(Gambit);
     }
+    public void move() {
+
+    }
+
+    public void print() {
+
+    }
+    public void run() {
+
+    }
 }
