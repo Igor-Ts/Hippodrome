@@ -32,5 +32,13 @@ public class Horse {
         return distance;
     }
 
+    public void move() {
+
+    }
+
+    public void print() {
+
+    }
+
 
 }

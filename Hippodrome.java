@@ -19,7 +19,9 @@ public class Hippodrome {
         hippodrome.getHorses().add(Gambit);
     }
     public void move() {
-
+        for (Horse horse: horses) {
+            horse.move();
+        }
     }
 
     public void print() {
