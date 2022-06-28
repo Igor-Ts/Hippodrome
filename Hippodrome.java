@@ -25,7 +25,11 @@ public class Hippodrome {
     }
 
     public void print() {
-
+        for (Horse horse: horses) {
+            horse.print();
+        }
+        System.out.println();
+        System.out.println();
     }
     public void run() {
         for (int i = 1; i < 101; i++) {
