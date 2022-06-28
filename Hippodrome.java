@@ -11,13 +11,14 @@ public class Hippodrome {
     public static void main(String[] args) {
         Hippodrome hippodrome = new Hippodrome();
         game = hippodrome;
-        Horse Appalon = new Horse("Appalon",3,0);
-        Horse Victory = new Horse("Victory",3,0);
-        Horse Gambit = new Horse("Gambit",3,0);
-        hippodrome.getHorses().add(Appalon);
-        hippodrome.getHorses().add(Victory);
-        hippodrome.getHorses().add(Gambit);
+        Horse appalon = new Horse("Appalon",3,0);
+        Horse victory = new Horse("Victory",3,0);
+        Horse gambit = new Horse("Gambit",3,0);
+        hippodrome.getHorses().add(appalon);
+        hippodrome.getHorses().add(victory);
+        hippodrome.getHorses().add(gambit);
         game.run();
+        hippodrome.printWinner();
     }
     public void move() {
         for (Horse horse: horses) {
@@ -42,6 +43,19 @@ public class Hippodrome {
                 System.out.println(e.getClass());
             }
         }
+    }
 
+    public Horse getWinner () {
+        Horse winnerHorse = new Horse("winner",0,0);
+        for (Horse horse: horses) {
+            if (horse.distance > winnerHorse.distance) {
+                winnerHorse = horse;
+            }
+        }
+        return winnerHorse;
+    }
+
+    public void printWinner () {
+        System.out.println("Winner is " + getWinner().name + "!");
     }
 }
