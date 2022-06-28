@@ -17,6 +17,7 @@ public class Hippodrome {
         hippodrome.getHorses().add(Appalon);
         hippodrome.getHorses().add(Victory);
         hippodrome.getHorses().add(Gambit);
+        game.run();
     }
     public void move() {
         for (Horse horse: horses) {
